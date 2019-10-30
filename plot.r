@@ -1,5 +1,6 @@
 #BiocManager::install(c("EBImage"))
 
+library(dplyr)
 library(ggplot2)
 library(ggimage)
 
