@@ -12,8 +12,10 @@ df <- read.csv('data.csv') %>%
   mutate(date = as.POSIXct(date))
 
 p1 <- ggplot(df, aes(x = date, y = trees)) +
-  geom_image(aes(image = sample(images, size = length(df$trees)))) +
+  geom_image(aes(image = sample(images, 
+                                size = length(df$trees), 
+                                replace = TRUE))) +
   labs(x = 'Date', y = 'Number of trees') +
-  theme_classic()
+  theme_light()
 
 ggsave('plot.svg', plot = p1)
