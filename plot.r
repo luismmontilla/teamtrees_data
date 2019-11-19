@@ -19,3 +19,4 @@ p1 <- ggplot(trees, aes(x = date, y = trees)) +
   theme_light()
 
 ggsave('plot.svg', plot = p1)
+
